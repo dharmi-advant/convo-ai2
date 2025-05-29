@@ -59,7 +59,6 @@ export default function ChatInput() {
       setIsLoading(false);
     }
   };
-  console.log('hello');
 
   return (
     // ... existing code ...
