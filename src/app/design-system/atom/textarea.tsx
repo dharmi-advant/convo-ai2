@@ -1,4 +1,4 @@
-import { cx, focusInput, hasErrorInput } from '@/lib';
+import { cx, focusInput, hasErrorInput } from '@/lib/utils';
 import React from 'react';
 
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {

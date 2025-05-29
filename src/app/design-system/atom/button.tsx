@@ -1,4 +1,4 @@
-import { cx, focusRing } from '@/lib';
+import { cx, focusRing } from '@/lib/utils';
 
 import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
