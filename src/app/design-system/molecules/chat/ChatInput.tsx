@@ -33,13 +33,18 @@ export default function ChatInput() {
     setInput('');
     setMessages(msgs => [...msgs, { sender: 'user', text: input }]);
     setIsLoading(true);
+    // ... existing code ...
+    // ... existing code ...
     try {
-      const response = await fetch('http://localhost:3000/api/chat', {
+      const baseUrl = window.location.origin; // This will get the current URL dynamically
+      console.log(baseUrl);
+      const response = await fetch(`${baseUrl}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          // ... existing code ...
           messages: [...messages, { sender: 'user', text: input }],
         }),
       });
