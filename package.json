@@ -23,6 +23,7 @@
     "@remixicon/react": "^4.6.0",
     "@supabase/ssr": "^0.6.1",
     "@tremor/react": "^3.18.7",
+    "autoprefixer": "^10.4.21",
     "clsx": "^2.1.1",
     "dotenv": "^16.5.0",
     "geist": "^1.4.2",
