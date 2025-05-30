@@ -3,7 +3,8 @@ import { Title, Text } from '@tremor/react';
 import { Button } from '../atom/button';
 import { SignedOut, SignedIn, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
 import ChatInput from './chat/ChatInput';
-import ChatSidebar from '@/components/thread/chat-thread';
+import ChatThread from '@/components/thread/chat-thread';
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4">
@@ -14,7 +15,7 @@ export default function Home() {
       </div>
       <SignedIn>
         <ChatInput />
-        <ChatSidebar />
+        <ChatThread />
       </SignedIn>
       <SignedOut>
         <div className="w-full max-w-md space-y-8 text-center">
