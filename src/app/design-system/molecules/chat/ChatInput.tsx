@@ -36,9 +36,7 @@ export default function ChatInput() {
     // ... existing code ...
     // ... existing code ...
     try {
-      const baseUrl = window.location.origin; // This will get the current URL dynamically
-      console.log(baseUrl);
-      const response = await fetch(`${baseUrl}/api/chat`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
