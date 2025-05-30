@@ -1,9 +1,21 @@
-import { cx, focusRing } from '@/lib/utils';
-
 import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { RiLoader2Fill } from '@remixicon/react';
 import { tv, type VariantProps } from 'tailwind-variants';
+import clsx, { type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+// Utility functions moved from lib/utils.ts
+export function cx(...args: ClassValue[]) {
+  return twMerge(clsx(...args));
+}
+
+export const focusRing = [
+  // base
+  'outline outline-offset-2 outline-0 focus-visible:outline-2',
+  // outline color
+  'outline-blue-500 dark:outline-blue-500',
+];
 
 const buttonVariants = tv({
   base: [

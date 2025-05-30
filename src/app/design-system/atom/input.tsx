@@ -6,8 +6,17 @@
 import React from 'react';
 import { RiEyeFill, RiEyeOffFill, RiSearchLine } from '@remixicon/react';
 import { tv, type VariantProps } from 'tailwind-variants';
+import { cx } from '@/lib/utils';
 
-import { cx, hasErrorInput } from '@/lib/utils';
+// Define hasErrorInput styles directly in the file
+const hasErrorInput = [
+  // base
+  'ring-2',
+  // border color
+  'border-red-500 dark:border-red-700',
+  // ring color
+  'ring-red-200 dark:ring-red-700/30',
+];
 
 const inputStyles = tv({
   base: [
