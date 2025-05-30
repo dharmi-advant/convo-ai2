@@ -6,7 +6,17 @@
 import React from 'react';
 import { RiEyeFill, RiEyeOffFill, RiSearchLine } from '@remixicon/react';
 import { tv, type VariantProps } from 'tailwind-variants';
-import { cx } from '@/lib/utils';
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+/**
+ * Combines class names using clsx and merges Tailwind classes using twMerge
+ * @param inputs - Class names to combine
+ * @returns Merged class names string
+ */
+export function cx(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 
 // Define hasErrorInput styles directly in the file
 const hasErrorInput = [

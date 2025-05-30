@@ -2,8 +2,14 @@
 
 import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
+import { type ClassValue } from 'clsx';
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
-import { cx } from '@/lib/utils';
+// Local utility function
+function cx(...args: ClassValue[]) {
+  return twMerge(clsx(...args));
+}
 
 interface CardProps extends React.ComponentPropsWithoutRef<'div'> {
   asChild?: boolean;
