@@ -3,7 +3,7 @@ import { Title, Text } from '@tremor/react';
 import { Button } from '../atom/button';
 import { SignedOut, SignedIn, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
 import ChatInput from './chat/ChatInput';
-import ChatSidebar from '@/components/chat-thread';
+import ChatSidebar from '@/components/thread/chat-thread';
 
 export default function Home() {
   return (
